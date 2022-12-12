@@ -181,24 +181,7 @@ var simulation = function() {
     render();
 }
 
-// var doubleNumParticles = function() {
-//     if(2*numParticles > maxNumParticles) return;
-//     for ( var i = 0; i < 2*numParticles; i++ ) {
-//         particleSystem[i].mass = 1.0;
-//         particleSystem[i].color = snowColor;
-//         for ( var j = 0; j < 3; j++ ) {
-//             particleSystem[i].position[j] = 2.0 * (Math.random() - 0.5);
-//             particleSystem[i].velocity[j] = speed * 2.0 * (Math.random() - 0.5);
-//         }
-//         particleSystem[i].position[3] = 1.0;;
-//     }
-
-//     numParticles *= 2;
-
-//     update();
-// }
-
-var forces = function( ParticleI) {
+var forces = function(ParticleI) {
     var ParticleK;
     var force = vec4(0, 0, 0, 0);
     if ( gravity) force[1] = -0.5;
